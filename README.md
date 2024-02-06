@@ -7,7 +7,7 @@
 
 ## activate the venv
 
-`.\venv\Scripts\active`
+`.\venv\Scripts\activate`
 
 ## install dependencies
 
