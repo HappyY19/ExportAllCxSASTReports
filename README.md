@@ -1,5 +1,7 @@
 # ExportAllCxSASTReports
 
+## clone the repo
+`git clone https://github.com/HappyY19/ExportAllCxSASTReports.git`
 
 ## create a virtual env
 
