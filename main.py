@@ -1,5 +1,6 @@
 import os
 import datetime
+import traceback
 import click
 import time
 
@@ -97,7 +98,10 @@ def main(cxsast_base_url, cxsast_username, cxsast_password):
             print(f"scan id: {scan_id}")
             for report_type in ["PDF", "RTF", "CSV", "XML"]:
                 print(f"start generating {report_type} report")
-                generate_report(project_name, scan_id, result_state_list, report_type)
+                try:
+                    generate_report(project_name, scan_id, result_state_list, report_type)
+                except Exception as e:
+                    print(traceback.format_exc())
                 print(f"finish generating {report_type} report")
     print("Finish process...")
 
